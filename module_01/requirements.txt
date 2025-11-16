@@ -1,0 +1,13 @@
+# RSS and Web Scraping
+requests>=2.31.0
+feedparser>=6.0.10
+beautifulsoup4>=4.12.2
+
+# HTML parsing (using html.parser instead of lxml for Python 3.13 compatibility)
+html5lib>=1.1
+
+# Google Drive API (Module 03)
+google-api-python-client>=2.100.0
+google-auth-httplib2>=0.1.1
+google-auth-oauthlib>=1.1.0
+python-dateutil>=2.8.2

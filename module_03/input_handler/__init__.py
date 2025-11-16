@@ -1,0 +1,3 @@
+"""
+Input handler package initialization
+"""

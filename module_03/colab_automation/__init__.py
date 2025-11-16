@@ -1,0 +1,3 @@
+"""
+Colab automation package initialization
+"""

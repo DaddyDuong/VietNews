@@ -1,0 +1,3 @@
+"""
+Output handler package initialization
+"""
