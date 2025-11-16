@@ -284,7 +284,3 @@ Generated audio files can be used for:
 - [ ] Web interface for monitoring
 - [ ] Email notifications on completion/failure
 - [ ] Support for other Colab alternatives (Kaggle, Paperspace)
-
-## License
-
-Part of the ATI_02 project.

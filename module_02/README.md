@@ -275,10 +275,6 @@ Example output:
 - Adjust `temperature` (lower = more conservative)
 - Ensure sufficient source articles (minimum 5)
 
-## License
-
-Part of the ATI_02 project.
-
 ## Contact
 
 For issues or questions, please refer to the main project documentation.

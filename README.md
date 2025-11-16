@@ -337,8 +337,8 @@ This is an academic project. For questions or improvements:
 
 ## 📧 Contact
 
-- Repository: [Nam01042004/VietNews](https://github.com/Nam01042004/VietNews)
-- Issues: [GitHub Issues](https://github.com/Nam01042004/VietNews/issues)
+- Repository: [DaddyDuong/VietNews](https://github.com/DaddyDuong/VietNews)
+- Issues: [GitHub Issues](https://github.com/DaddyDuong/VietNews/issues)
 
 ## 🙏 Acknowledgments
 

@@ -214,10 +214,24 @@ def main():
     # Determine project root
     project_root = Path(__file__).parent.absolute()
     
+    # Convert date string to actual date
+    if args.date == 'yesterday':
+        target_date = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+    elif args.date == 'today':
+        target_date = datetime.now().strftime('%Y-%m-%d')
+    else:
+        # Validate date format
+        try:
+            datetime.strptime(args.date, '%Y-%m-%d')
+            target_date = args.date
+        except ValueError:
+            print_error(f"Invalid date format: {args.date}. Use YYYY-MM-DD, 'yesterday', or 'today'")
+            sys.exit(1)
+    
     # Print header
     print_header("VIETNEWS - VIETNAMESE TECH NEWS TO AUDIO PIPELINE")
     print(f"Project root: {project_root}")
-    print(f"Date: {args.date}")
+    print(f"Date: {target_date}")
     print(f"Modules to run: {args.modules}")
     if args.dry_run:
         print_warning("DRY RUN MODE - No commands will be executed")
@@ -265,7 +279,7 @@ def main():
         print_step(2, 3, "MODULE 02 - AI Bulletin Generator")
         
         module_path = project_root / 'module_02'
-        command = [sys.executable, 'main.py', '--date', args.date]
+        command = [sys.executable, 'main.py', '--date', target_date]
         
         if args.dry_run:
             print_info(f"Would execute: {' '.join(command)} in {module_path}")
@@ -287,7 +301,7 @@ def main():
         print_step(3, 3, "MODULE 03 - TTS Automation via Google Colab")
         
         module_path = project_root / 'module_03'
-        command = [sys.executable, 'main.py', '--date', args.date]
+        command = [sys.executable, 'main.py', '--date', target_date]
         
         # Add headless flag
         if args.no_headless:
@@ -333,28 +347,12 @@ def main():
             print(f"  • Database: {db_path}")
         
         if 2 in args.modules:
-            # Determine output date
-            if args.date == 'yesterday':
-                target_date = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
-            elif args.date == 'today':
-                target_date = datetime.now().strftime('%Y-%m-%d')
-            else:
-                target_date = args.date
-            
             json_path = project_root / 'module_02' / 'output' / f'{target_date}.json'
             txt_path = project_root / 'module_02' / 'output' / f'{target_date}.txt'
             print(f"  • Bulletin (JSON): {json_path}")
             print(f"  • Bulletin (TXT): {txt_path}")
         
         if 3 in args.modules:
-            # Determine output date
-            if args.date == 'yesterday':
-                target_date = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
-            elif args.date == 'today':
-                target_date = datetime.now().strftime('%Y-%m-%d')
-            else:
-                target_date = args.date
-            
             audio_path = project_root / 'module_03' / 'output' / f'{target_date}.wav'
             print(f"  • Audio: {audio_path}")
         
