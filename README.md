@@ -29,7 +29,7 @@ This pipeline consists of three interconnected modules that work together to:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Nam01042004/VietNews.git
+   git clone https://github.com/DaddyDuong/VietNews.git
    cd VietNews
    ```
 
