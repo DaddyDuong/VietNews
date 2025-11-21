@@ -36,9 +36,7 @@ This pipeline consists of three interconnected modules that work together to:
 2. **Install dependencies**:
    ```bash
    # Install all dependencies at once
-   pip install -r module_01/requirements.txt
-   pip install -r module_02/requirements.txt
-   pip install -r module_03/requirements.txt
+   pip install -r requirements.txt
    ```
 
 3. **Configure Module 02 (Gemini API)**:
@@ -97,6 +95,7 @@ python run_pipeline.py --continue-on-error
 VietNews/
 ├── run_pipeline.py           # Master orchestrator (run this!)
 ├── README.md                 # This file
+├── requirements.txt          # Combined project dependencies
 ├── .gitignore               # Git ignore rules
 │
 ├── module_01/               # News Scraper & Aggregator

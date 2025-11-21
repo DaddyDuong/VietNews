@@ -1,0 +1,24 @@
+# Combined requirements for all modules in VietNews pipeline
+# This file aggregates dependencies from module_01, module_02, and module_03
+
+# RSS and Web Scraping (Module 01)
+requests>=2.31.0
+feedparser>=6.0.10
+beautifulsoup4>=4.12.2
+html5lib>=1.1
+
+# Google APIs (Module 01)
+google-api-python-client>=2.100.0
+google-auth-httplib2>=0.1.1
+google-auth-oauthlib>=1.1.0
+
+# Date utilities (Modules 01, 03)
+python-dateutil>=2.8.2
+
+# AI and Environment (Module 02)
+google-genai>=0.4.0
+python-dotenv>=1.0.0
+
+# Browser Automation (Module 03)
+selenium>=4.15.0
+webdriver-manager>=4.0.1
